@@ -1,0 +1,17 @@
+body {
+  font-family: "Segoe UI";
+}
+
+h1 {
+  color: green;
+  font-size: 36px;
+}
+
+p {
+  text-indent: 1em;
+}
+
+#content {
+  outline: 1px dotted black;
+  padding: 1em;
+}
