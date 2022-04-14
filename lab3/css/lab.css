@@ -1,0 +1,10 @@
+img {
+   width: 80vw;
+   margin: 1em;
+   box-shadow: 0 0 2px #00000050;
+   transition: box-shadow 0.3s;
+}
+
+img:hover {
+   box-shadow: 0 0 7px #00000050;
+}
