@@ -17,6 +17,7 @@ body {
 
 img {
    width: 400px;
+   object-fit: contain;
 }
 
 .other_screens {
