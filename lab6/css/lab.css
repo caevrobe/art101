@@ -1,0 +1,8 @@
+.results {
+   box-shadow: 0 0 2px black;
+   padding: 1em;
+}
+
+pre {
+   margin: 0;
+}
