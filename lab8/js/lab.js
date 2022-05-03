@@ -41,7 +41,7 @@ async function generateRandomSquares() {
       elem = [Math.random(), Math.random(), Math.random()];
       rgb = elem.map(floatToRGBComponent);
       if (i == 0)
-         console.log(`Float values: ${elem} | RGB values: ${rgb}`);
+         console.log(`Float values: ${elem}\nRGB values: ${rgb}`);
 
       drawSquare(x, y, rgb[0], rgb[1], rgb[2]);
       y = (y + s_height) % c_height;
