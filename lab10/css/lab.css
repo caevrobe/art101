@@ -1,0 +1,31 @@
+.one {
+   animation: blink 500ms steps(1, end) infinite;
+}
+
+.two {
+   animation: blink 890ms steps(1, start) infinite;
+}
+
+@keyframes blink {
+   0% {
+      opacity: 0;
+   }
+   5% {
+      opacity: 0;
+   }
+   10% {
+      opacity: 1;
+   }
+   25% {
+      opacity: 0;
+   }
+   50% {
+      opacity: 1;
+   }
+   75% {
+      opacity: 1;
+   }
+   100% {
+      opacity: 0;
+   }
+}
