@@ -54,7 +54,7 @@ function mess_with_name() {
       <b>Anagram:</b> ${anagram(username, undefined, true)}`;
 }
 
-let glitchable = document.querySelectorAll('p, h1, h2', 'label', 'b');
+let glitchable = document.querySelectorAll('p, h1, h2, label, b');
 
 // periodically scramble letters on page
 async function glitch() {
