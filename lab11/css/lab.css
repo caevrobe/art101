@@ -5,6 +5,27 @@
    gap: 0.5em;
 }
 
+div {
+   animation: hoverColor 1s ease-in-out infinite alternate;
+}
+
+.special {
+   -webkit-animation: simple-scale 1s ease-in-out infinite alternate;
+   animation: simple-scale 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes simple-scale {
+   100% {
+      -webkit-transform: scale(0.95);
+   }
+}
+
+@keyframes simple-scale {
+   100% {
+      transform: scale(0.95);
+   }
+}
+
 .results {
    width: min-content;
 }

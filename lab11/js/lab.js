@@ -4,25 +4,11 @@
  */
 
 
-
-// content to add to the page when buttons are clicked
-let toAdd = [{
-      section: 'challenges',
-      text: 'For this lab we switched over from JavaScript to jQuery.'
-   },
-   {
-      section: 'problems',
-      text: `jQuery\'s syntax is a little weird to get used to compared ` +
-         `to JavaScript, but it wasn\'t too hard to learn what we needed ` +
-         `for this lab.`
-   }
-]
-
-// add click handlers to buttons
-toAdd.forEach((curr) => {
-   $(`#show_${curr.section}`).click(function() {
-      $(`#${curr.section}`).append(`<p>${curr.text}</p>`);
-      this.remove();
+$('.toggle').each(function() {
+   let current = jQuery(this);
+   current.click(function() {
+      let div = jQuery(this).parent();
+      div.toggleClass('special');
    });
 });
 
@@ -50,7 +36,7 @@ $(document).ready(() => {
 });
 
 let score = 0;
-let total = 1;
+let total = 0;
 
 // updates score when active tile is clicked
 function activeClicked() {
@@ -66,6 +52,7 @@ async function startGame() {
    await new Promise(r => setTimeout(r, 1000));
 
    for (;;) {
+      $('#score').text(`${score}/${total++} ${Math.trunc((score/total)*100)}%`);
       let current = buttons[randInt(numButtons - 1)];
       current.addClass('active');
       let handler = current.on('click', activeClicked);
@@ -77,6 +64,6 @@ async function startGame() {
       current.removeClass('active');
 
       await new Promise(r => setTimeout(r, randInt(750) + 250));
-      $('#score').text(`${score}/${total++} ${Math.trunc((score/total)*100)}%`);
+      $('#score').text(`${score}/${total} ${Math.trunc((score/total)*100)}%`);
    }
 }
