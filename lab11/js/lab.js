@@ -4,13 +4,22 @@
  */
 
 
-$('.toggle').each(function() {
-   let current = jQuery(this);
-   current.click(function() {
+
+// create buttons with click handlers for each section
+$('#challenges,#problems').each(function() {
+   console.log(this)
+   let button = $('<input>').attr({
+      'type': 'button',
+      'value': '...',
+      'class': 'toggle'
+   }).appendTo(this);
+
+   button.click(function() {
       let div = jQuery(this).parent();
       div.toggleClass('special');
    });
 });
+
 
 // returns random integer <= max
 function randInt(max) {
@@ -34,6 +43,8 @@ $(document).ready(() => {
    });
    startGame();
 });
+
+
 
 let score = 0;
 let total = 0;
