@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>Lab 13 - Loops</title>
+   <link rel="stylesheet" type="text/css" href="../css/site.css">
+   <link rel="stylesheet" type="text/css" href="css/lab.css">
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+   <script src="js/lab.js" defer></script>
+</head>
+
+<body>
+   <h1>Lab 13 - Loops</h1>
+   <div id="row">
+      <div id="main">
+         <div id="challenges">
+            <h2>Challenge:</h2>
+            For this lab we had to use loops, jQuery, and arrays to calculate many fizzbuzz values and display them on this page.
+         </div>
+
+         <div id="problems">
+            <h2>Problems:</h2>
+            I had issues trying to figure out the best way to nicely write the results out in columns using flexbox and grid displays. I wanted the newly appended items to be added to the bottom leftmost spot available, wrapping over to the next column when a certain
+            number of rows was reached but nothing was woring correctly. I ended up just doing it by creating separate tables and setting their size manually in javascript.
+         </div>
+
+         <div id="results">
+            <h2>Results: </h2>
+            <input type="range" min="0" max="1000" value="0" step="1" id="input" />
+            <div class="grid" id="output"></div>
+         </div>
+      </div>
+   </div>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+.grid {
+   border: 1px solid black;
+   background-color: #DDDDDD;
+   display: flex;
+   flex-direction: row;
+   width: auto;
+}
+
+li {
+   white-space: pre;
+}
+
+ol {
+   margin-right: 1em;
+}
