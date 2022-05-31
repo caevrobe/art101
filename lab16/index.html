@@ -15,16 +15,23 @@
       <div id="main">
          <div id="challenges">
             <h2>Challenge:</h2>
-            For this lab, we learned how to use the XKCD API to fetch comics for display.
+            For this lab, we learned how to use the XKCD API to fetch comics for display. The arrow buttons allow you to advance to the previous and next comics, the text box allows you to type in a comic number [1, latest#]. Pressing enter in the text box will load the comic with the given number.
          </div>
 
          <div id="problems">
             <h2>Problems:</h2>
-            None.
+            I was getting CORS issues with the XKCD API. Luckily I found a proxy that someone made online that would let me make requests for comics without issues.
          </div>
 
          <div id="results">
             <h2>Results: </h2>
+            <div id="row">
+               <input type="button" value="⟵" id="prev" onclick="advance(-1)"/>
+               <input type="number" id="num" min="1"/>
+               <input type="button" value="⟶" id="next" onclick="advance(1)"/>
+            </div>
+            <br>
+            <img src="" id="comic"/>
          </div>
       </div>
    </div>
